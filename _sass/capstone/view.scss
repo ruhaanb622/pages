@@ -1,0 +1,100 @@
+// Dynamic capstone viewer components.
+// These OCS objects are intentionally reusable: layout belongs to the grid,
+// interaction belongs to the button, and the viewer only composes them.
+
+.ocs-grid {
+  display: grid;
+  gap: 2rem;
+  min-width: 0;
+
+  &--capstone {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items: stretch;
+  }
+
+  > * {
+    min-width: 0;
+  }
+}
+
+.ocs-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid $infograph-border;
+  border-radius: 999px;
+  color: $infograph-foreground;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.28);
+    color: $infograph-foreground;
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $infograph-foreground;
+    outline-offset: 3px;
+  }
+
+  &--primary {
+    background: $infograph-btn-bg;
+
+    &:hover {
+      background: $infograph-btn-hover;
+    }
+  }
+}
+
+.capstone-message {
+  max-width: 720px;
+  margin: 4rem auto;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid $infograph-border;
+  border-radius: 16px;
+  background: $infograph-card;
+  color: $infograph-muted;
+  text-align: center;
+
+  &--error {
+    border-color: rgba(255, 255, 255, 0.22);
+    color: $infograph-foreground;
+  }
+}
+
+.cv-infograph {
+  .cv-card {
+    margin-bottom: 0;
+  }
+
+  .cv-content,
+  .cv-details {
+    gap: 0.75rem;
+  }
+
+  .cv-details .ocs-button {
+    align-self: flex-start;
+    margin-top: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .ocs-grid--capstone {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-infograph {
+    padding: 1.5rem 0.75rem;
+
+    .cv-header,
+    .cv-card {
+      padding: 1.5rem;
+    }
+  }
+}
