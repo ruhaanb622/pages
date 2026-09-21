@@ -1,0 +1,371 @@
+/* SFI Foundation-inspired lesson theme.
+ * Scoped to pages that opt in with frontmatter: sfi_theme: true.
+ */
+
+.sfi-themed-page {
+  --sfi-lesson-bg: #f4f5f7;
+  --sfi-lesson-surface: #ffffff;
+  --sfi-lesson-surface-soft: #f0f2f5;
+  --sfi-lesson-border: #d1d5db;
+  --sfi-lesson-blue: #1a5fa8;
+  --sfi-lesson-blue-dark: #124080;
+  --sfi-lesson-blue-accent: #3b9ede;
+  --sfi-lesson-gold: #e8a020;
+  --sfi-lesson-text: #1a1d23;
+  --sfi-lesson-muted: #6b7280;
+
+  background: var(--sfi-lesson-bg);
+  color: var(--sfi-lesson-text);
+  font-family: "Inter", Arial, sans-serif;
+  padding: 0 0 56px;
+
+  > .wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 24px 0;
+  }
+
+  .post {
+    overflow: hidden;
+    background: var(--sfi-lesson-surface);
+    border: 1px solid var(--sfi-lesson-border);
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .post-header {
+    position: relative;
+    margin: 0;
+    padding: 30px 40px 28px;
+    background: linear-gradient(105deg, #0d2e5c 0%, #1a5fa8 60%, #1e7bc4 100%);
+    border-bottom: 3px solid var(--sfi-lesson-blue-accent);
+    color: #fff;
+
+    &::before {
+      content: "SFI FOUNDATION · CODING LAB";
+      display: block;
+      margin-bottom: 12px;
+      color: #bfe7ff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      color: #fff;
+      font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
+      font-size: clamp(1.9rem, 4vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      line-height: 1.15;
+    }
+
+    .page-description {
+      max-width: 760px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 1rem;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    .post-meta,
+    .post-meta time {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .category-tags-link {
+      margin-bottom: 10px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+
+  .post-content {
+    padding: 34px 40px 48px;
+    color: var(--sfi-lesson-text);
+    line-height: 1.72;
+  }
+
+  .post-content > blockquote:first-child {
+    margin-top: 0;
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
+    color: var(--sfi-lesson-blue-dark);
+  }
+
+  .post-content h2 {
+    margin-top: 2.3rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 2px solid var(--sfi-lesson-blue-accent);
+    font-size: 1.6rem;
+    letter-spacing: 0.02em;
+  }
+
+  .post-content h3 {
+    margin-top: 1.8rem;
+    padding-bottom: 0;
+    border-bottom: 0;
+    color: var(--sfi-lesson-blue);
+    font-size: 1.25rem;
+  }
+
+  .post-content blockquote {
+    margin: 1.2rem 0 1.6rem;
+    padding: 14px 18px;
+    background: #eef6ff;
+    border-left: 4px solid var(--sfi-lesson-blue-accent);
+    border-radius: 0 4px 4px 0;
+    color: #25364a;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .post-content hr {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid var(--sfi-lesson-border);
+  }
+
+  .post-content code {
+    padding: 0.12rem 0.36rem;
+    border-radius: 4px;
+    background: #eef2f7;
+    color: #0d3d6f;
+  }
+
+  .post-content pre code,
+  .CodeMirror code {
+    padding: 0;
+    background: transparent;
+    color: inherit;
+  }
+
+  .post-content table {
+    width: 100%;
+    margin: 1.25rem 0 1.75rem;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 1px solid var(--sfi-lesson-border);
+    border-radius: 5px;
+    background: #fff;
+  }
+
+  .post-content th,
+  .post-content td {
+    padding: 10px 12px;
+    border-right: 1px solid var(--sfi-lesson-border);
+    border-bottom: 1px solid var(--sfi-lesson-border);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .post-content th {
+    background: var(--sfi-lesson-blue-dark);
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .post-content tr:nth-child(even) td {
+    background: #f8fafc;
+  }
+
+  .post-content th:last-child,
+  .post-content td:last-child {
+    border-right: 0;
+  }
+
+  .post-content tr:last-child td {
+    border-bottom: 0;
+  }
+
+  .code-runner-container {
+    margin: 1.6rem 0 2rem;
+    overflow: hidden;
+    border: 1px solid var(--sfi-lesson-border);
+    border-top: 3px solid var(--sfi-lesson-blue);
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+
+    .challenge-box {
+      margin: 0;
+      padding: 14px 18px;
+      border: 0;
+      border-bottom: 1px solid var(--sfi-lesson-border);
+      border-radius: 0;
+      background: #eef6ff;
+      box-shadow: none;
+
+      h3 {
+        margin: 0 0 4px;
+        color: var(--sfi-lesson-blue-dark);
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 0.95rem;
+      }
+
+      p {
+        margin: 0;
+        color: #374151;
+        font-size: 0.9rem;
+      }
+    }
+
+    details {
+      margin: 0;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--sfi-lesson-border);
+      background: #f8fafc;
+    }
+
+    .editor-container,
+    .output-container {
+      margin: 0;
+      min-width: 0;
+    }
+
+    .control-panel {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0;
+      padding: 9px 12px;
+      border: 0;
+      border-radius: 0;
+      background: var(--sfi-lesson-blue-dark);
+
+      span {
+        color: rgba(255, 255, 255, 0.9);
+      }
+    }
+
+    .languageSelect,
+    .fontSizeSelect {
+      width: auto;
+      min-width: 112px;
+      height: 36px;
+      margin: 0;
+      padding: 5px 8px;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      background: #fff;
+      color: #111827;
+      font-size: 0.86rem;
+    }
+
+    .ocs__btn.utility {
+      width: 36px;
+      height: 36px;
+      margin: 0;
+      flex: 0 0 36px;
+      border-color: rgba(255, 255, 255, 0.32);
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+
+      &:hover {
+        border-color: #fff;
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    .ocs__btn.utility.run {
+      background: var(--sfi-lesson-blue-accent);
+      border-color: var(--sfi-lesson-blue-accent);
+      color: #fff;
+    }
+
+    .CodeMirror {
+      width: 100%;
+      min-height: 220px;
+      border: 0;
+      border-radius: 0;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .CodeMirror-scroll {
+      min-height: 220px;
+    }
+
+    .output-content {
+      min-height: 96px;
+      max-height: 320px;
+      overflow: auto;
+      padding: 16px;
+      border: 0;
+      border-top: 1px solid var(--sfi-lesson-border);
+      background: #f8fafc;
+      color: #111827;
+      font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+      line-height: 1.55;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .output-container .control-panel:first-child {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .output-container .control-panel:last-child {
+      min-height: 34px;
+      background: #e9eef5;
+
+      span {
+        color: #475569;
+      }
+    }
+  }
+
+  @media (max-width: 720px) {
+    > .wrapper {
+      padding: 14px 10px 0;
+    }
+
+    .post-header {
+      padding: 24px 20px 22px;
+    }
+
+    .post-content {
+      padding: 24px 18px 34px;
+    }
+
+    .post-content table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .code-runner-container {
+      .control-panel {
+        gap: 6px;
+      }
+
+      .languageSelect,
+      .fontSizeSelect {
+        min-width: 0;
+        max-width: none;
+        flex: 1 1 118px;
+      }
+
+      .CodeMirror,
+      .CodeMirror-scroll {
+        min-height: 190px;
+      }
+    }
+  }
+}
